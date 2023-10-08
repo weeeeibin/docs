@@ -9,7 +9,6 @@ const config = {
   title: "My Docs",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
-
   // Set the production url of your site here
   url: "https://mrmd.xyz",
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -20,7 +19,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
-
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -41,7 +39,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          routeBasePath: "/",
+          routeBasePath: "/markdown",
           editUrl: "https://github.com/weeeeibin/docs/blob/main/",
         },
         blog: {
@@ -66,7 +64,7 @@ const config = {
       navbar: {
         title: "My Docs",
         logo: {
-          alt: "My Site Logo",
+          alt: "My Docs Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -75,6 +73,11 @@ const config = {
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "文档",
+          },
+          {
+            href: "https://github.com/weeeeibin/docs",
+            label: "GitHub",
+            position: "right",
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
         ],
