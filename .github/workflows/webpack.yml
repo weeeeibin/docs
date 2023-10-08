@@ -24,3 +24,10 @@ jobs:
       run: |
         yarn
         npm run build
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3 # 使用部署到 GitHub pages 的 action
+      with:
+        publish_dir: ./build
+        commit_message: 自动部署
+
