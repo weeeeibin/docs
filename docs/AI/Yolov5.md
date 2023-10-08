@@ -29,4 +29,3 @@ python ./train.py --img 1278 --batch 16 --data ../train_data/chiken.yaml --patie
 ```shell
 python detect.py --img 1278 --weights ./runs/train/exp/weights/last.pt --source /content/train_data/images/test/1.jpg
 ```
-123
