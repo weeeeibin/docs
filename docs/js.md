@@ -126,3 +126,17 @@ console.log(f.__proto__ === F.prototype) // true
 ```
 [] instanceof Array === true
 ```
+
+## 为什么 typeof null === 'object';
+在 JavaScript 的初始版本中，值存储在32位单元中，其中由类型（1-3位）和值的实际数据组成。类型标签存储在单元的低位中。其中有五个：
+```
+000: object. The data is a reference to an object.
+1:   int. The data is a 31 bit signed integer.
+010: double. The data is a reference to a double floating point number.
+100: string. The data is a reference to a string.
+110: boolean. The data is a boolean.
+```
+对于所有对象，其类型标记位均为 000。从 JavaScript 的第一个版本开始，null 就被认为是 JavaScript 中的一个特殊值。null 是空指针的表示。然而 JavaScript 中没有像 C 那样的指针。所以 null 仅仅意味着什么都没有或 void，并且由全0表示。因此它的所有 32 位都是 0。因此，每当 JavaScrit 解释器读取 null 时，它都会将前 3 位视为“对象”类型。这就是为什么 typeof null 返回 object。
+:::tip
+这是自ECMAScript 第一个版本以来的一个错误，不幸的是无法修复，因为它会破坏现有代码。
+:::
