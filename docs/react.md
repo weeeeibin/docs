@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 前端面试题 React/JS
+# 前端面试题 React
 
 ## 函数组件和Class有什么差异
 
@@ -62,40 +62,6 @@ hooks的更新会按照函数组件加载阶段就已经固定的hook链表顺�
 :::
 
 
-## 什么是截流防抖
-节流：限制一个动作在一段时间内只能执行一次。<br/>
-一般使用场景：scroll事件、input框实时搜索并发送
-
-防抖：当一个动作连续触发，只执行最后一次。<br/>
-一般使用场景：登录、发短信等按钮避免用户点击太快，以致于发送了多次请求，需要防抖,<br/>
-调整浏览器窗口大小时，resize 次数过于频繁，造成计算过多，此时需要一次到位，就用到了防抖
-
-## 作用域
-全局作用域：直接写在 script 标签中的 JavaScript 代码都是全局作用域。<br/>
-函数作用域：作用于函数内的代码环境，就是局部作用域。
-
-## 闭包
-在一个方法内引用不属于这个这个作用域的变量，当方法执行退出后变量仍然可以访问<br/>
-如何创造闭包：一个嵌套的内部(子)函数引用了嵌套的外部(父)函数的变量(函数)时, 就产生了闭包
-```
-function fn1 () {
-    var a = 2;
-    function fn2 () { // 执行函数定义后，才产生闭包，不必非得执行内部函数
-        console.log(a);
-    }
-}
-fn1();
-```
-一般使用情况：主要的使用场景就是为了创建私有的变量和截流防抖中使用。
-
-## 箭头函数与普通函数的区别
-箭头函数主要作用是区别普通函数的二义性，普通函数既可以当做方法调用也可以当做构造函数通过new创建对象，箭头函数只能通过调用方法的方式执行不能当做构造函数。
-
-this的绑定机制：箭头函数没有自己的this，它继承外层作用域的this值，这意味着箭头函数中的this指向是在函数定义时确定的，不会因为后续代码或调用方式的变化而改变（call, apply, bind会改变普通函数的this，但不会改变箭头函数的this），如果没有上层函数作用域，则指向顶部this（在浏览器中顶部this则是window）。
-
-arguments对象的使用：箭头函数没有自己的arguments对象，可以使用剩余参数(rest parameters)来访问传递给函数的所有参数。
-
-
 ## React Diff
 
 ### 是什么
@@ -119,48 +85,6 @@ DOM节点跨层级的操作不做优化，只会对相同层级的节点进行�
 :::tip
 对于简单列表渲染而言,由于dom节点的移动操作开销是比较昂贵的，没有key的情况下要比有key的性能更好
 :::
-
-## JS事件循环之宏任务和微任务
-> [具体代码分析看这里](https://juejin.cn/post/6873424205791100942)
-### 任务队列
-任务队列中的任务也分为两种，分别是：宏任务（Macro-take）和微任务（Micro-take）<br />
-宏任务：script(JS 整体代码)、setTimeout、setInterval、setImmediate、I/O、UI 交互<br />
-微任务：Promise(重点关注)、process.nextTick(Node.js)、MutaionObserver
-
-任务队列的执行过程是：先执行一个宏任务，执行过程中如果产出新的宏/微任务，就将他们推入相应的任务队列，之后在执行一队微任务，之后再执行宏任务，如此循环。
-![](../assets/52bec546cf0748f9b89f5ca537d77baa~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.awebp)
-
-## __proto__ 和 prototype的关系
-
-__proto__指向的是其原型的prototype
-
-```
-function F(){ 
-
-}
-
-//为原型中添加test()方法
-F.prototype.test = function(){
-    console.log('这里是为原型中添加的方法')
-}
-
-//每一个实例对象都有一个__proto__属性，称之为隐式原型
-var f = new F() 
-//创建实例对象时，内部产生语句: this.__proto__ = F.prototype
-
-//实例对象的隐式原型的值和其构造函数显式原型的值所对应
-console.log(f.__proto__ === F.prototype) // true
-
-```
-
-## instanceof的用法
-官方回答：用来检测 constructor.prototype 是否存在于参数 object 的原型链上。
-
-大白话：用来检测某个对象是否从某些原型上创建
-
-```
-[] instanceof Array === true
-```
 
 ## React Fiber 
 
