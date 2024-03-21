@@ -15,9 +15,9 @@ sidebar_position: 2
 + apply
 + bind
 ### 区别
-call和apply唯一的区别是：call传入的是参数列表，apply传入的是数组，也可以是类数组
+call和apply唯一的区别是：call传入的是参数列表，apply传入的是数组，也可以是类数组。
 
-bind和call、apply的区别： bind返回的是一个改变了this指向的函数，便于稍后调用，不像call和apply会立即调用；bind和call很像，传入的也是参数列表，但是可以多次传入，不需要像call，一次传入
+bind和call、apply的区别： bind返回的是一个改变了this指向的函数，便于稍后调用，不像call和apply会立即调用。
 
 :::tip
 当 bind 返回的函数 使用new作为构造函数时，绑定的 this 值会失效，this指向实例对象，但传入的参数依然生效 （new调用的优先级 > bind调用）
