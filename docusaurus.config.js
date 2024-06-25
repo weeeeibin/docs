@@ -74,11 +74,6 @@ const config = {
             position: "left",
             label: "文档",
           },
-          {
-            href: "https://github.com/weeeeibin/docs",
-            label: "GitHub",
-            position: "right",
-          },
           // {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
