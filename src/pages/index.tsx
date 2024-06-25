@@ -7,7 +7,7 @@ export default function index() {
         <Layout>
             <BrowserOnly>
                 {() => {
-                    const MyHome = require('../MyHome');
+                    const MyHome = require('../MyHome').default;
                     return <MyHome />;
                 }}
             </BrowserOnly>
