@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Lottie from "react-lottie";
-import Animation from './YAJ13lAVJs.json';
+import Animation from './4E3sZ47Efw.json';
 import styles from './index.module.css';
 import Layout from '@theme/Layout';
 
@@ -33,8 +33,8 @@ export default function index({ }: Props) {
                 <div className={styles.animation}>
                     <Lottie
                         options={options}
-                        height={600}
-                        width={600}
+                        height={660}
+                        width={660}
                     />
                 </div>
             </div>
