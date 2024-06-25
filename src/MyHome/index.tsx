@@ -59,7 +59,7 @@ export default function MyHome({ }: Props) {
                     </h1>
                     <p>{window.navigator.userAgent}</p>
                     <button className={styles.button}>
-                        <a href="/docs/markdown/react">Go To Docs</a>
+                        <a href="/markdown/react">Go To Docs</a>
                     </button>
                 </div>
                 <div className={styles.animation}>
