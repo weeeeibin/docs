@@ -13,7 +13,7 @@
 .animation {
   position: absolute;
   right: 0;
-  bottom: -80px;
+  top: 20px;
   z-index: -1;
 }
 
@@ -48,10 +48,19 @@
   margin-top: 40px;
 }
 
-.button a{
+.button a {
   display: block;
   height: 100%;
   width: 100%;
   color: #ffff;
   line-height: 50px;
+}
+
+.mobile_main {
+  width: 100vw;
+  height: calc(100dvh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
