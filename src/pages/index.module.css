@@ -47,3 +47,11 @@
   cursor: pointer;
   margin-top: 40px;
 }
+
+.button a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #ffff;
+  line-height: 50px;
+}

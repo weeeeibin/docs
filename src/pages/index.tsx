@@ -28,7 +28,9 @@ export default function index({ }: Props) {
                         <br />今天有没有在互联网<br />上发现什么神奇小玩意？
                     </h1>
                     <p>{window.navigator.userAgent}</p>
-                    <button className={styles.button}>Go To Docs</button>
+                    <button className={styles.button}>
+                        <a href="/docs/markdown/react">Go To Docs</a>
+                    </button>
                 </div>
                 <div className={styles.animation}>
                     <Lottie
