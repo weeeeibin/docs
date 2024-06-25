@@ -1,0 +1,66 @@
+.main {
+  min-width: 1200px;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  margin: auto;
+  padding-top: 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.animation {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: -1;
+}
+
+.title {
+  max-width: 600px;
+}
+
+.title>h1 {
+  font-size: 48px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.title>p {
+  font-size: 18px;
+  color: #63727e !important;
+  line-height: 28px;
+  padding: 0 6px;
+}
+
+.button {
+  width: 206px;
+  height: 50px;
+  background-color: #019d91;
+  border-radius: 16px;
+  border: none;
+  color: #ffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.button a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #ffff;
+  line-height: 50px;
+}
+
+.mobile_main {
+  width: 100vw;
+  height: calc(100dvh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
