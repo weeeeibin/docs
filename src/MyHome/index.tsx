@@ -28,7 +28,7 @@ export default function MyHome({ }: Props) {
         if (isMobile) {
             setTimeout(() => {
                 setIsPaused(true)
-            }, 3800)
+            }, 3200)
         }
     }, [isMobile])
 
@@ -39,7 +39,7 @@ export default function MyHome({ }: Props) {
                     <Lottie
                         options={options}
                         height="25vw"
-                        width="80%"
+                        width="85%"
                         isPaused={isPaused}
                     />
                 </div>
@@ -59,7 +59,7 @@ export default function MyHome({ }: Props) {
                     </h1>
                     <p>{window.navigator.userAgent}</p>
                     <button className={styles.button}>
-                        <a href="/markdown/react">Go To Docs</a>
+                        <a href="/markdown/react">View Docs</a>
                     </button>
                 </div>
                 <div className={styles.animation}>
